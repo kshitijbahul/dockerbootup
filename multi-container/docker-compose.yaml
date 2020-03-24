@@ -1,0 +1,12 @@
+version: '3'
+services:
+    redis-server:
+        image: 'redis'
+    node-app:
+        #look in the current file for the docker file
+        build: . 
+        ports:
+            #port on local machine 
+            # - sign in YAML means an array
+            #this is to open access to our container on our machines
+            - "4110:8081"
