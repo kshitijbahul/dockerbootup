@@ -3,6 +3,8 @@ services:
     redis-server:
         image: 'redis'
     node-app:
+        #setting a restart policy always, on-faliure
+        restart: always
         #look in the current file for the docker file
         build: . 
         ports:
