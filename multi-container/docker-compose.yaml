@@ -4,7 +4,7 @@ services:
         image: 'redis'
     node-app:
         #setting a restart policy always, on-faliure
-        restart: always
+        restart: on-failure
         #look in the current file for the docker file
         build: . 
         ports:
