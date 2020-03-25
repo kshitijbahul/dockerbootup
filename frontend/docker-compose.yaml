@@ -16,3 +16,11 @@ services:
             # map the current folder with the /app folder in the file
             - .:/app
         stdin_open: true
+    frontendtest:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes: 
+            - /app/node_modules
+            - .:/app
+        command: ["npm","run","test"]
