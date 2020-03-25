@@ -15,3 +15,4 @@ services:
             - /app/node_modules
             # map the current folder with the /app folder in the file
             - .:/app
+        stdin_open: true
